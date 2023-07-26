@@ -1,0 +1,1810 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Bhai+2&family=Nunito:ital,wght@0,700;1,500&family=Open+Sans:ital@1&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0F0826;
+}
+
+/* -------- navbar style start -------*/
+.container {
+    display: flex;
+    left: 20%;
+    height: 68px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    height: 68px;
+    width: 100%;
+    padding: 20px 50px;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.048);
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    border-left: 1px solid rgba(255, 255, 255, 0.123);
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+}
+
+.s-word i {
+    font-size: 64px;
+    font-weight: 500;
+    color: #B900A7;
+    text-shadow: 0 0 10px #0F0826,
+        0 0 16px #B900A7,
+        0 0 26px #B900A7;
+}
+
+.w-word i {
+    position: absolute;
+    top: 32px;
+    left: 16px;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(206, 213, 219);
+    text-shadow: 0 0 10px #0F0826,
+        0 0 16px #0F0826,
+        0 0 26px #0F0826;
+}
+
+.list ul {
+    display: flex;
+}
+
+.visible {
+    display: flex;
+    display: none;
+}
+
+.list ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.list ul li .home {
+    position: relative;
+    color: #B900A7;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 3px 15px;
+    transition: .5s;
+}
+
+.list ul li .home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #B900A7;
+    transition: 0.5s;
+}
+
+.list ul li .home:hover::after {
+    width: 100%;
+}
+
+.list li a {
+    text-decoration: none;
+}
+
+.hire-me {
+    position: relative;
+    font-size: 19px;
+    font-weight: 500;
+    border: 1px solid #B900A7;
+    background: #B900A7;
+    color: #0F0826;
+    padding: 3px 2px;
+    border-radius: 6px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px #B900A7;
+    z-index: 1;
+}
+
+.hire-me:hover {
+    background: #df07c9;
+}
+
+.down {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        position: fixed;
+    }
+
+    .menu {
+        display: block;
+        font-size: 26px;
+        color: #B900A7;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .nav {
+        padding: 20px 20px;
+    }
+
+    .list {
+        position: absolute;
+        top: 76px;
+        right: 0;
+        width: 200px;
+        height: 0px;
+        border-radius: 10px;
+        background: #0f0826c7;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-left: 1px solid #b900a64f;
+        border-right: 1px solid #b900a64f;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .list.openmenu {
+        height: 360px;
+    }
+
+    .list ul {
+        flex-direction: column;
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0 auto;
+        opacity: 0;
+    }
+
+    .list.openmenu ul {
+        opacity: 1;
+    }
+
+    .list ul li {
+        margin: 15px;
+    }
+
+    .list ul li .hire-me {
+        margin-left: 15px;
+    }
+
+    .visible {
+        display: block;
+        margin-bottom: 26px;
+    }
+
+    .down {
+        display: block;
+        position: absolute;
+        top: 58px;
+        right: 28px;
+        color: rgba(255, 255, 255, 0.308);
+        opacity: 0;
+    }
+
+    .openmenu.down {
+        opacity: 1;
+    }
+
+}
+
+@media(max-width: 425px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .menu {
+        display: block;
+        font-size: 26px;
+        color: #B900A7;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .nav {
+        padding: 20px 20px;
+    }
+
+    .list {
+        position: absolute;
+        top: 76px;
+        right: 0;
+        width: 200px;
+        height: 0px;
+        border-radius: 10px;
+        background: #0f0826c7;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-left: 1px solid #b900a64f;
+        border-right: 1px solid #b900a64f;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .list.openmenu {
+        height: 360px;
+    }
+
+    .list ul {
+        flex-direction: column;
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0 auto;
+        opacity: 0;
+    }
+
+    .list.openmenu ul {
+        opacity: 1;
+    }
+
+    .list ul li {
+        margin: 15px;
+    }
+
+    .list ul li .hire-me {
+        margin-left: 15px;
+    }
+
+    .visible {
+        display: block;
+        margin-bottom: 26px;
+    }
+
+    .down {
+        display: block;
+        position: absolute;
+        top: 58px;
+        right: 28px;
+        color: rgba(255, 255, 255, 0.308);
+        opacity: 0;
+    }
+
+    .openmenu.down {
+        opacity: 1;
+    }
+}
+
+/* ------ navbar style end ------*/
+/* ------- heading section style start --------*/
+
+#heading-section {
+    display: flex;
+    margin: 97px 40px 60px 40px;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.effects {
+    position: absolute;
+}
+
+.effects:nth-child(1) {
+    top: -18%;
+    left: 90px;
+    height: 180px;
+    width: 180px;
+    filter: blur(90px);
+    border-radius: 78% 22% 33% 67% / 45% 37% 63% 55%;
+    background: #1F1461;
+    box-shadow: 0 0 10px #1F1461,
+        0 0 40px #1F1461,
+        0 0 70px #1F1461,
+        0 0 100px #1F1461;
+}
+
+.effects:nth-child(2) {
+    bottom: 12%;
+    left: 22%;
+    height: 180px;
+    width: 380px;
+    filter: blur(110px);
+    border-radius: 78% 22% 33% 67% / 45% 37% 63% 55%;
+    background: linear-gradient(#1F1461, #f107844b);
+    box-shadow: 0 0 10px #1F1461,
+        0 0 40px #1F1461,
+        0 0 70px #1F1461,
+        0 0 100px #1F1461;
+}
+
+.title {
+    width: 50%;
+    margin: 0 50px;
+    margin-top: 8%;
+    color: rgb(206, 213, 219);
+    z-index: 1;
+}
+
+.title h2 {
+    font-size: 35px;
+    word-spacing: 10px;
+}
+
+.title h1 {
+    font-size: 45px;
+    word-spacing: 4px;
+}
+
+.title p {
+    width: 70%;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.btn-box {
+    position: relative;
+    margin-top: 28px;
+    padding: 10px 28px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid #B900A7;
+    box-shadow: 0px 0px 10px #B900A7;
+    border-radius: 16px;
+    background: transparent;
+    color: #B900A7;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
+
+.btn-box:hover {
+    color: #0F0826;
+}
+
+.btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #B900A7;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box:hover::before {
+    width: 100%;
+}
+
+.btn-box:active::before {
+    background: #8f0281;
+}
+
+@media (max-width: 1024px) {
+    #heading-section {
+        margin: 130px 10px 60px 0px;
+    }
+
+    .title h2 {
+        font-size: 30px;
+    }
+
+    .title h1 {
+        font-size: 38px;
+    }
+
+    .title p {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #heading-section {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin: 30px 10px;
+        overflow: hidden;
+    }
+
+    .title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title h2 {
+        font-size: 26px;
+    }
+
+    .title p {
+        width: 100%;
+    }
+
+    .effects:nth-child(1) {
+        top: 0px;
+        left: 0px;
+        height: 100px;
+        width: 100px;
+        filter: blur(50px);
+    }
+
+    .effects:nth-child(2) {
+        bottom: -10%;
+        left: -90px;
+        filter: blur(100px);
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    #heading-section {
+        flex-wrap: wrap-reverse;
+        margin: 30px 10px;
+        overflow: hidden;
+    }
+
+    .title {
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .title h2 {
+        font-size: 22px;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+
+    .title p {
+        width: 100%;
+    }
+
+    .btn-box {
+        padding: 8px 20px;
+        margin-bottom: 20px;
+    }
+
+    .effects:nth-child(1) {
+        top: -40px;
+        left: 0px;
+        height: 100px;
+        width: 100px;
+        filter: blur(50px);
+    }
+
+    .effects:nth-child(2) {
+        bottom: -10%;
+        left: -90px;
+        filter: blur(100px);
+    }
+
+    .nav {
+        z-index: 1;
+    }
+}
+
+/* heading section style end */
+
+
+/* -----img design start ------*/
+.image-design {
+    display: flex;
+    position: relative;
+    height: 700px;
+    width: 50%;
+}
+
+.effect-1 {
+    position: absolute;
+    filter: blur(50px);
+}
+
+.effect-2 {
+    position: absolute;
+    display: flex;
+    top: 10%;
+    right: 0px;
+}
+
+.effect-1:nth-child(1) {
+    top: 28%;
+    right: 40px;
+    height: 180px;
+    width: 180px;
+    filter: blur(60px);
+    border-radius: 78% 22% 33% 67% / 45% 37% 63% 55%;
+    background: #1F1461;
+    box-shadow: 0 0 10px #1F1461,
+        0 0 40px #1F1461,
+        0 0 70px #1F1461,
+        0 0 100px #1F1461;
+}
+
+.effect-2 span:nth-child(1) {
+    height: 180px;
+    width: 180px;
+    filter: blur(90px);
+    border-radius: 78% 22% 33% 67% / 45% 37% 63% 55%;
+    background: #f107844b;
+    box-shadow: 0 0 10px #772452,
+        0 0 40px #772452,
+        0 0 70px #772452,
+        0 0 100px #772452;
+}
+
+.img-area {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* add particles */
+.img-area span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.img-area span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #B900A7;
+    border-radius: 50%;
+    animation: moveParticles 2s linear infinite;
+}
+
+@keyframes moveParticles {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(300px);
+    }
+}
+
+.face {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    height: 250px;
+    width: 200px;
+}
+
+.face .chick {
+    position: absolute;
+    bottom: 20px;
+    left: 45px;
+    height: 130px;
+    width: 100px;
+    border-bottom: 1px solid #B900A7;
+    border-right: 1px solid #B900A7;
+    border-bottom-right-radius: 40%;
+    transform: skewX(50deg);
+    transform: rotate(38deg);
+}
+
+.face .lip {
+    position: absolute;
+    bottom: 45px;
+    left: 56px;
+    height: 50px;
+    width: 60px;
+}
+
+.lip .lip-bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 14px;
+    height: 10px;
+    width: 30px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: #EC018E;
+}
+
+.lip .lip-top1 {
+    position: absolute;
+    top: 24.5px;
+    left: 11px;
+    height: 10px;
+    width: 20px;
+    background-color: #EC018E;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transform: rotate(10deg);
+}
+
+.lip-top1 .lip-corner1 {
+    position: absolute;
+    left: -1px;
+    top: 8px;
+    height: 2px;
+    width: 6px;
+    background-color: #EC018E;
+    transform: skew(-30deg);
+}
+
+.lip .lip-top2 {
+    position: absolute;
+    top: 24.5px;
+    right: 14px;
+    height: 10px;
+    width: 18.5px;
+    background-color: #EC018E;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transform: rotate(-10deg);
+}
+
+.lip-top2 .lip-corner2 {
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    height: 2px;
+    width: 6px;
+    background-color: #EC018E;
+    transform: skew(30deg);
+}
+
+.lip .lip-mark {
+    position: absolute;
+    top: 32px;
+    left: 23px;
+    height: 6px;
+    width: 12px;
+    background: transparent;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom: 1px solid rgb(134, 6, 81);
+}
+
+.face .nose {
+    position: absolute;
+    top: 153px;
+    left: 71px;
+    height: 10px;
+    width: 30px;
+}
+
+.nose .left {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    height: 5px;
+    width: 4.5px;
+    background-color: #EC018E;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 30px;
+    transform: rotate(70deg);
+}
+
+.nose .right {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    height: 6px;
+    width: 4.8px;
+    background-color: #EC018E;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: rotate(-110deg);
+}
+
+.face .eyes {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    height: 60px;
+    width: 70px;
+}
+
+.eyes .brue {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    height: 35px;
+    width: 60px;
+    transform: skewX(70deg);
+    transform: rotate(-16deg);
+}
+
+.eyes .brue::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-top-right-radius: 50px;
+    box-shadow: 0 -5px 0 #EC018E;
+}
+
+.eyes .lash {
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    height: 15px;
+    width: 35px;
+    transform: skewX(-30deg);
+    transform: rotate(-8deg);
+}
+
+.eyes .lash::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 3px 0 #EC018E;
+}
+
+.lash .lash1 {
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    height: 1px;
+    width: 20px;
+    background-color: #B900A7;
+    transform: rotate(-20deg);
+}
+
+.lash .lash2 {
+    position: absolute;
+    top: 17px;
+    right: -6px;
+    height: 1.6px;
+    width: 13px;
+    background-color: #B900A7;
+    box-shadow: 0 0 10px #B900A7;
+    transform: rotate(30deg);
+}
+
+.lash .lash3 {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    height: 1.6px;
+    width: 12px;
+    background-color: #B900A7;
+    box-shadow: 0 0 10px #B900A7;
+    transform: rotate(27deg);
+}
+
+.hair .hair1 svg {
+    position: absolute;
+    top: -110px;
+    left: -30px;
+    height: 300px;
+    transform: rotate(40deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669) blur(1px);
+}
+
+.hair1 .cls-1 {
+    fill: url(#gradient-clr);
+}
+
+.hair .hair2 svg {
+    position: absolute;
+    top: -44px;
+    left: 36px;
+    height: 140px;
+    transform: rotate(3deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair2 .cls-2 {
+    fill: url(#gradient-clr2);
+    filter: blur(1px);
+}
+
+.hair .hair3 svg {
+    position: absolute;
+    top: 140px;
+    left: -96px;
+    height: 330px;
+    transform: rotate(10deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair3 .cls-3 {
+    fill: url(#gradient-clr3);
+    filter: blur(1px);
+}
+
+.hair .hair4 svg {
+    position: absolute;
+    top: -44px;
+    right: -60px;
+    height: 140px;
+    transform: rotate(8deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair4 .cls-4 {
+    fill: url(#gradient-clr4);
+    filter: blur(1px);
+}
+
+.hair .hair5 svg {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    height: 140px;
+    transform: rotate(15deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair5 .cls-5 {
+    fill: url(#gradient-clr5);
+    filter: blur(1px);
+}
+
+.hair .hair6 svg {
+    position: absolute;
+    top: 89px;
+    right: -60px;
+    height: 320px;
+    transform: rotate(15deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair6 .cls-6 {
+    fill: url(#gradient-clr6);
+    filter: blur(1px);
+}
+
+.hair .hair7 svg {
+    position: absolute;
+    top: -160px;
+    left: -145px;
+    height: 330px;
+    transform: rotate(22deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair7 .cls-7 {
+    fill: url(#gradient-clr7);
+    filter: blur(1px);
+}
+
+.hair .hair8 svg {
+    position: absolute;
+    top: 32px;
+    left: -238px;
+    height: 350px;
+    transform: rotate(15deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair8 .cls-8 {
+    fill: url(#gradient-clr8);
+    filter: blur(1px);
+}
+
+.hair .hair9 svg {
+    position: absolute;
+    top: -110px;
+    left: -238px;
+    height: 320px;
+    transform: rotate(16deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair9 .cls-9 {
+    fill: url(#gradient-clr9);
+    filter: blur(1px);
+}
+
+.hair .hair10 svg {
+    position: absolute;
+    top: -148px;
+    left: 30px;
+    height: 48px;
+    transform: rotate(25deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair10 .cls-10 {
+    fill: url(#gradient-clr10);
+    filter: blur(1px);
+}
+
+.hair .hair11 svg {
+    position: absolute;
+    top: -188px;
+    left: -140px;
+    height: 96px;
+    transform: rotate(4deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair11 .cls-11 {
+    fill: url(#gradient-clr11);
+    filter: blur(1px);
+}
+
+.hair .hair12 svg {
+    position: absolute;
+    top: -168px;
+    right: -200px;
+    height: 340px;
+    transform: rotate(-10deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair12 .cls-12 {
+    fill: url(#gradient-clr12);
+    filter: blur(1px);
+}
+
+.hair .hair13 svg {
+    position: absolute;
+    top: 90px;
+    right: -150px;
+    height: 260px;
+    transform: rotate(-4deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair13 .cls-13 {
+    fill: url(#gradient-clr13);
+    filter: blur(1px);
+}
+
+.hair .hair14 svg {
+    position: absolute;
+    top: 100px;
+    left: -160px;
+    height: 150px;
+    transform: rotate(20deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair14 .cls-14 {
+    fill: url(#gradient-clr14);
+    filter: blur(1px);
+}
+
+.hair .hair15 svg {
+    position: absolute;
+    top: 136px;
+    left: -110px;
+    height: 220px;
+    transform: rotate(10deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair15 .cls-15 {
+    fill: url(#gradient-clr15);
+    filter: blur(1px);
+}
+
+.hair .hair16 svg {
+    position: absolute;
+    top: 60px;
+    left: -84px;
+    height: 58px;
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair16 .cls-16 {
+    fill: url(#gradient-clr16);
+    filter: blur(1px);
+}
+
+.hair .hair17 svg {
+    position: absolute;
+    top: 18px;
+    left: -100px;
+    height: 110px;
+    transform: rotate(14deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair17 .cls-17 {
+    fill: url(#gradient-clr17);
+    filter: blur(1px);
+}
+
+.hair .hair18 svg {
+    position: absolute;
+    top: -96px;
+    left: 10px;
+    height: 150px;
+    transform: rotate(34deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair18 .cls-18 {
+    fill: url(#gradient-clr18);
+    filter: blur(1px);
+}
+
+.hair .hair19 svg {
+    position: absolute;
+    top: -100px;
+    left: -76px;
+    height: 180px;
+    transform: rotate(20deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair19 .cls-19 {
+    fill: url(#gradient-clr19);
+    filter: blur(1px);
+}
+
+.hair .hair20 svg {
+    position: absolute;
+    top: -130px;
+    left: -90px;
+    height: 150px;
+    transform: rotate(18deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair20 .cls-20 {
+    fill: url(#gradient-clr20);
+    filter: blur(1px);
+}
+
+.hair .hair21 svg {
+    position: absolute;
+    top: -50px;
+    right: -80px;
+    height: 105px;
+    transform: rotate(10deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair21 .cls-21 {
+    fill: url(#gradient-clr21);
+    filter: blur(1px);
+}
+
+.hair .hair22 svg {
+    position: absolute;
+    top: -80px;
+    right: -105px;
+    height: 80px;
+    transform: rotate(16deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair22 .cls-22 {
+    fill: url(#gradient-clr22);
+    filter: blur(1px);
+}
+
+.hair .hair23 svg {
+    position: absolute;
+    top: -110px;
+    right: -125px;
+    height: 50px;
+    transform: rotate(10deg);
+    stroke-width: 2px;
+    stroke: #B900A7;
+    filter: drop-shadow(0 0 10px #b900a669);
+}
+
+.hair23 .cls-23 {
+    fill: url(#gradient-clr23);
+    filter: blur(1px);
+}
+
+@media (max-width: 1024px) {
+    .effect-1:nth-child(1) {
+        top: 32%;
+        right: 0px;
+        height: 180px;
+        width: 180px;
+        filter: blur(70px);
+    }
+
+    .effect-2 {
+        position: absolute;
+        display: flex;
+        top: 49%;
+        right: 0px;
+    }
+
+    .hair .hair1 svg {
+        top: -105px;
+        left: -17px;
+        height: 277px;
+    }
+
+    .hair .hair2 svg {
+        top: -44px;
+        left: 52px;
+        height: 119px;
+    }
+
+    .hair .hair3 svg {
+        top: 129px;
+        left: -84px;
+        height: 268px;
+    }
+
+    .hair .hair4 svg {
+        top: -35px;
+        right: -49px;
+        height: 124px;
+    }
+
+    .hair .hair5 svg {
+        top: 21px;
+        right: -23px;
+        height: 134px;
+        transform: rotate(13deg);
+    }
+
+    .hair .hair6 svg {
+        top: 94px;
+        right: -33px;
+        height: 251px;
+    }
+
+    .hair .hair7 svg {
+        top: -149px;
+        left: -122px;
+        height: 304px;
+    }
+
+    .hair .hair8 svg {
+        top: 43px;
+        left: -195px;
+        height: 266px;
+    }
+
+    .hair .hair9 svg {
+        top: -71px;
+        left: -181px;
+        height: 232px;
+        transform: rotate(9deg);
+    }
+
+    .hair .hair10 svg {
+        top: -133px;
+        left: 44px;
+        height: 38px;
+        transform: rotate(25deg);
+    }
+
+    .hair .hair11 svg {
+        top: -166px;
+        left: -141px;
+        height: 89px;
+        transform: rotate(-2deg);
+    }
+
+    .hair .hair12 svg {
+        top: -158px;
+        right: -142px;
+        height: 287px;
+    }
+
+    .hair .hair13 svg {
+        top: 88px;
+        right: -80px;
+        height: 181px;
+    }
+
+    .hair .hair14 svg {
+        top: 101px;
+        left: -139px;
+        height: 128px;
+        transform: rotate(27deg);
+    }
+
+    .hair .hair15 svg {
+        top: 121px;
+        left: -92px;
+        height: 192px;
+    }
+
+    .hair .hair16 svg {
+        top: 57px;
+        left: -65px;
+        height: 57px;
+    }
+
+    .hair .hair17 svg {
+        top: 8px;
+        left: -83px;
+        height: 111px;
+        transform: rotate(12deg);
+    }
+
+    .hair .hair18 svg {
+        top: -87px;
+        left: 18px;
+        height: 143px;
+    }
+
+    .hair .hair19 svg {
+        top: -108px;
+        left: -56px;
+        height: 170px;
+        transform: rotate(29deg);
+    }
+
+    .hair .hair20 svg {
+        top: -122px;
+        left: -75px;
+        height: 144px;
+    }
+
+    .hair .hair21 svg {
+        top: -48px;
+        right: -44px;
+        height: 82px;
+        transform: rotate(6deg);
+    }
+
+    .hair .hair22 svg {
+        top: -70px;
+        right: -65px;
+        height: 65px;
+    }
+
+    .hair .hair23 svg {
+        top: -108px;
+        right: -102px;
+        height: 51px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-design {
+        width: 100%;
+        height: 550px;
+        margin-top: 50px;
+    }
+
+    .effect-1:nth-child(1) {
+        top: 42%;
+        right: 0px;
+        height: 180px;
+        width: 180px;
+        filter: blur(70px);
+    }
+
+    .effect-2 {
+        position: absolute;
+        display: flex;
+        top: 59%;
+        right: 0px;
+    }
+
+    .hair .hair3 svg {
+        top: 130px;
+        left: -66px;
+        height: 230px;
+        transform: rotate(10deg);
+    }
+
+    .hair .hair4 svg {
+        position: absolute;
+        top: -34px;
+        right: -56px;
+        height: 130px;
+        z-index: 1;
+    }
+
+    .hair .hair6 svg {
+        top: 93px;
+        right: -36px;
+        height: 230px;
+    }
+
+    .hair .hair7 svg {
+        top: -130px;
+        left: -100px;
+        height: 280px;
+        transform: rotate(22deg);
+    }
+
+    .hair .hair8 svg {
+        top: 33px;
+        left: -208px;
+        height: 300px;
+        transform: rotate(28deg);
+    }
+
+    .hair .hair9 svg {
+        top: -83px;
+        left: -183px;
+        height: 260px;
+        transform: rotate(18deg);
+    }
+
+    .hair .hair10 svg {
+        top: -118px;
+        left: 50px;
+        height: 38px;
+    }
+
+    .hair .hair11 svg {
+        top: -151px;
+        left: -134px;
+        height: 90px;
+    }
+
+    .hair .hair12 svg {
+        top: -130px;
+        right: -150px;
+        height: 280px;
+        transform: rotate(-10deg);
+        z-index: 1;
+    }
+
+    .hair .hair13 svg {
+        top: 84px;
+        right: -100px;
+        height: 200px;
+        transform: rotate(0deg);
+    }
+
+    .hair .hair14 svg {
+        top: 100px;
+        left: -128px;
+        height: 126px;
+        transform: rotate(34deg);
+    }
+
+    .hair .hair15 svg {
+        top: 122px;
+        left: -90px;
+        height: 190px;
+        transform: rotate(17deg);
+    }
+
+    .hair .hair16 svg {
+        top: 44px;
+        left: -81px;
+        height: 65px;
+    }
+
+    .hair .hair17 svg {
+        top: 4px;
+        left: -81px;
+        height: 114px;
+        transform: rotate(10deg);
+    }
+
+    .hair .hair18 svg {
+        top: -84px;
+        left: 14px;
+        height: 144px;
+        transform: rotate(37deg);
+    }
+
+    .hair .hair19 svg {
+        top: -98px;
+        left: -37px;
+        height: 153px;
+        transform: rotate(30deg);
+    }
+
+    .hair .hair20 svg {
+        top: -108px;
+        left: -60px;
+        height: 128px;
+        transform: rotate(18deg);
+    }
+
+    .hair .hair21 svg {
+        top: -46px;
+        right: -69px;
+        height: 100px;
+        transform: rotate(7deg);
+    }
+
+    .hair .hair22 svg {
+        top: -58px;
+        right: -80px;
+        height: 70px;
+        transform: rotate(16deg);
+    }
+
+    .hair .hair23 svg {
+        top: -76px;
+        right: -109px;
+        height: 50px;
+        transform: rotate(15deg);
+    }
+
+
+}
+
+@media (max-width: 425px) {
+    .image-design {
+        height: 434px;
+    }
+
+    .face {
+        height: 225px;
+        width: 184px;
+        left: 37%;
+    }
+
+    .face .chick {
+        bottom: 48px;
+        left: 32px;
+        height: 98px;
+        width: 88px;
+    }
+
+    .face .lip {
+        bottom: 58px;
+        left: 49px;
+        height: 42px;
+        width: 53px;
+    }
+
+    .lip .lip-bottom {
+        left: 13px;
+        bottom: 9.4px;
+        height: 7px;
+        width: 24px;
+    }
+
+    .lip .lip-top1 {
+        top: 18.5px;
+        left: 11px;
+        height: 7px;
+        width: 15px;
+    }
+
+    .lip-top1 .lip-corner1 {
+        top: 5px;
+    }
+
+    .lip .lip-top2 {
+        top: 18.5px;
+        right: 15px;
+        height: 7px;
+        width: 15px;
+    }
+
+    .lip-top2 .lip-corner2 {
+        top: 5px;
+        left: 10px;
+    }
+
+    .lip .lip-mark {
+        top: 24px;
+        left: 20px;
+        height: 4px;
+        width: 9px;
+    }
+
+    .face .nose {
+        left: 61px;
+        height: 9px;
+        top: 123px;
+    }
+
+    .nose .left {
+        height: 4px;
+        width: 3.5px;
+    }
+
+    .nose .right {
+        right: 9px;
+        height: 4px;
+        width: 3.8px;
+    }
+
+    .face .eyes {
+        right: 32px;
+        top: 45px;
+    }
+
+    .eyes .brue {
+        top: 7px;
+        left: 7px;
+        height: 26px;
+        width: 38px;
+    }
+
+    .eyes .brue::before {
+        box-shadow: 0 -3px 0 #EC018E;
+    }
+
+    .eyes .lash {
+        top: 16px;
+        width: 24px;
+    }
+
+    .eyes .lash::before {
+        box-shadow: 0 2px 0 #EC018E;
+    }
+
+    .lash .lash1 {
+        right: -7px;
+        top: 12px;
+        width: 16px;
+    }
+
+    .lash .lash2 {
+        right: -2px;
+        height: 0.6px;
+        width: 7px;
+    }
+
+    .lash .lash3 {
+        top: 18px;
+        left: 12px;
+        height: 0.6px;
+        width: 7px;
+    }
+
+    .hair .hair1 svg {
+        top: -60px;
+        left: -20px;
+        height: 227px;
+        z-index: 1;
+    }
+
+    .hair .hair2 svg {
+        top: -8px;
+        left: 36px;
+        height: 91px;
+        transform: rotate(3deg);
+    }
+
+    .hair .hair3 svg {
+        top: 123px;
+        left: -37px;
+        height: 178px;
+    }
+
+    .hair .hair4 svg {
+        top: -1px;
+        right: 2px;
+        height: 84px;
+        transform: rotate(2deg);
+        z-index: 1;
+    }
+
+    .hair .hair5 svg {
+        top: 34px;
+        right: 14px;
+        height: 98px;
+        transform: rotate(8deg);
+    }
+
+    .hair .hair6 svg {
+        top: 87px;
+        right: 7px;
+        height: 162px;
+    }
+
+    .hair .hair7 svg {
+        top: -84px;
+        left: -75px;
+        height: 209px;
+    }
+
+    .hair .hair8 svg {
+        top: 46px;
+        left: -134px;
+        height: 197px;
+        transform: rotate(20deg);
+    }
+
+    .hair .hair9 svg {
+        top: -49px;
+        left: -132px;
+        height: 198px;
+        transform: rotate(14deg);
+    }
+
+    .hair .hair10 svg {
+        top: -67px;
+        left: 50px;
+        height: 24px;
+    }
+
+    .hair .hair11 svg {
+        top: -99px;
+        left: -86px;
+        height: 63px;
+    }
+
+    .hair .hair12 svg {
+        top: -79px;
+        right: -57px;
+        height: 187px;
+        transform: rotate(-11deg);
+    }
+
+    .hair .hair13 svg {
+        top: 76px;
+        right: -33px;
+        height: 131px;
+    }
+
+    .hair .hair14 svg {
+        top: 94px;
+        left: -103px;
+        height: 83px;
+        transform: rotate(-2deg);
+    }
+
+    .hair .hair15 svg {
+        top: 128px;
+        left: -54px;
+        height: 129px;
+        transform: rotate(17deg);
+    }
+
+    .hair .hair16 svg {
+        top: 71px;
+        left: -64px;
+        height: 50px;
+    }
+
+    .hair .hair17 svg {
+        top: 34px;
+        left: -77px;
+        height: 95px;
+        transform: rotate(17deg);
+    }
+
+    .hair .hair18 svg {
+        top: -44px;
+        left: 4px;
+        height: 128px;
+        transform: rotate(30deg);
+    }
+
+    .hair .hair19 svg {
+        top: -52px;
+        left: -29px;
+        height: 109px;
+        transform: rotate(33deg);
+    }
+
+    .hair .hair20 svg {
+        top: -67px;
+        left: -39px;
+        height: 104px;
+        transform: rotate(25deg);
+    }
+
+    .hair .hair21 svg {
+        top: -7px;
+        right: 5px;
+        height: 53px;
+        transform: rotate(-4deg);
+    }
+
+    .hair .hair22 svg {
+        top: -20px;
+        right: -6px;
+        height: 42px;
+        transform: rotate(5deg);
+    }
+
+    .hair .hair23 svg {
+        top: -41px;
+        right: -28px;
+        height: 32px;
+    }
+
+
+}
+
+
+
+@media (max-width:320px) {
+    .effect-1:nth-child(1) {
+        top: 62%;
+        right: 40px;
+        height: 140px;
+        width: 100px;
+    }
+
+    .effect-2 {
+        top: 99%;
+        left: 40px;
+    }
+
+    .effect-2 span:nth-child(1) {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+/* -----img design end ------*/
